@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -28,6 +29,12 @@ class TempListAdapter extends RecyclerView.Adapter<TempListAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull TempListAdapter.ViewHolder holder, int position) {
         holder.temp_text_view.setText(String.valueOf(tempData.get(position)));
+        if (tempData.get(position) >= 0) {
+            holder.temp_image.setImageResource(R.drawable.ic_lens_red_24dp);
+        } else {
+            holder.temp_image.setImageResource(R.drawable.ic_lens_blue_24dp);
+        }
+
     }
 
     @Override
@@ -37,10 +44,12 @@ class TempListAdapter extends RecyclerView.Adapter<TempListAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView temp_text_view;
+        ImageView temp_image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             temp_text_view = itemView.findViewById(R.id.temp_text_view);
+            temp_image = itemView.findViewById(R.id.temp_image);
         }
     }
 

@@ -4,10 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center">
+    <ImageView
+        android:id="@+id/temp_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
     <TextView
         android:id="@+id/temp_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding"
         android:textSize="20sp"/>
 
 </LinearLayout>

@@ -101,5 +101,10 @@ public class CreateActionFragment extends BaseFragment {
         cityList.add("Moscow");
         cityList.add("St. Peterburg");
         cityList.add("Kazan");
+        cityList.add("Tula");
+        cityList.add("Moscow");
+        cityList.add("St. Peterburg");
+        cityList.add("Kazan");
+        cityList.add("Tula");
     }
 }
