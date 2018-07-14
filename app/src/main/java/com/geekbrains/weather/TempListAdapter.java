@@ -7,12 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 class TempListAdapter extends RecyclerView.Adapter<TempListAdapter.ViewHolder> {
-    int [] temp_array;
+    ArrayList<Integer> tempData;
 
-    public TempListAdapter(int [] temp_array) {
-        this.temp_array = temp_array;
+    public TempListAdapter(ArrayList<Integer> tempData) {
+        this.tempData = tempData;
     }
 
     @NonNull
@@ -25,12 +27,12 @@ class TempListAdapter extends RecyclerView.Adapter<TempListAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TempListAdapter.ViewHolder holder, int position) {
-        holder.temp_text_view.setText(String.valueOf(temp_array[position]));
+        holder.temp_text_view.setText(String.valueOf(tempData.get(position)));
     }
 
     @Override
     public int getItemCount() {
-        return temp_array.length;
+        return tempData.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -40,5 +42,10 @@ class TempListAdapter extends RecyclerView.Adapter<TempListAdapter.ViewHolder> {
             super(itemView);
             temp_text_view = itemView.findViewById(R.id.temp_text_view);
         }
+    }
+
+    public void addItem(Integer newItem) {
+        tempData.add(newItem);
+        this.notifyItemInserted(tempData.size() - 1);
     }
 }
