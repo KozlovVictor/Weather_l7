@@ -56,8 +56,6 @@ public class TempHistoryFragment extends BaseFragment {
                 //tempAdaptor.notifyDataSetChanged();
             }
         });
-
-
     }
 
     private void convertToInteger(int[] tempResource, ArrayList<Integer> tempData) {
@@ -65,5 +63,4 @@ public class TempHistoryFragment extends BaseFragment {
             tempData.add(tempResource[i]);
         }
     }
-
 }

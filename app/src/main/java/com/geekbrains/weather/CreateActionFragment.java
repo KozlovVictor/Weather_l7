@@ -19,10 +19,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-/**
- * Created by shkryaba on 24/06/2018.
- */
-
 public class CreateActionFragment extends BaseFragment {
 
     //объявление переменных
@@ -92,8 +88,6 @@ public class CreateActionFragment extends BaseFragment {
                 return false;
             }
         });
-
-
     }
 
     private void initCountryList() {
@@ -102,9 +96,9 @@ public class CreateActionFragment extends BaseFragment {
         cityList.add("St. Peterburg");
         cityList.add("Kazan");
         cityList.add("Tula");
-        cityList.add("Moscow");
-        cityList.add("St. Peterburg");
-        cityList.add("Kazan");
-        cityList.add("Tula");
+        cityList.add("Krasnoyarsk");
+        cityList.add("Kaliningrad");
+        cityList.add("Novosibirsk");
+        cityList.add("Vladivostok");
     }
 }
